@@ -1,0 +1,21 @@
+// swiftlint:disable all
+
+// MARK: - AutoInjection for structs
+
+{% for type in types.implementing.AutoInjection %}
+{% if not type.kind == "protocolComposition" %}
+{% if type.kind == "struct" %}
+// MARK: - {{ type.name }}
+
+extension {{ type.name }} {
+    static func create(with resolver: Resolver) -> {{ type.name }} {
+        {{ type.name }}(
+            {% for variable in type.storedVariables %}
+            {{ variable.name }}: {% if variable.type.implements.AutoInjection %}{{ variable.typeName }}.create(with: resolver){% else %}resolver.resolve({{ variable.typeName }}.self)!{% endif %}{% if not forloop.last %},{% endif %}
+            {% endfor %}
+        )
+    }
+}
+{% endif %}{% endif %}
+{% endfor %}
+// swiftlint:enable all
