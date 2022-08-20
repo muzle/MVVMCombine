@@ -1,13 +1,6 @@
-//
-//  MVVM_CombineUITestsLaunchTests.swift
-//  MVVM_CombineUITests
-//
-//  Created by muzle on 20.08.2022.
-//
-
 import XCTest
 
-class MVVM_CombineUITestsLaunchTests: XCTestCase {
+class MVVMCombineUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
