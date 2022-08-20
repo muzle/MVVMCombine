@@ -20,6 +20,9 @@
 		2FAF33B828B11E03000C8488 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAF33B728B11E03000C8488 /* Swinject */; };
 		2FAF33BD28B11E81000C8488 /* Swinject+typealias+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33BC28B11E81000C8488 /* Swinject+typealias+extension.swift */; };
 		2FAF33BF28B11EB2000C8488 /* PlaceRepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33BE28B11EB2000C8488 /* PlaceRepositoryAssembly.swift */; };
+		2FAF33C128B125C5000C8488 /* ImageRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33C028B125C5000C8488 /* ImageRepositoryProtocol.swift */; };
+		2FAF33C428B12622000C8488 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33C328B12622000C8488 /* ImageRepository.swift */; };
+		2FAF33C628B1272E000C8488 /* ImageRepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33C528B1272E000C8488 /* ImageRepositoryAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		2FAF33B328B11C82000C8488 /* PlaceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRepository.swift; sourceTree = "<group>"; };
 		2FAF33BC28B11E81000C8488 /* Swinject+typealias+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swinject+typealias+extension.swift"; sourceTree = "<group>"; };
 		2FAF33BE28B11EB2000C8488 /* PlaceRepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRepositoryAssembly.swift; sourceTree = "<group>"; };
+		2FAF33C028B125C5000C8488 /* ImageRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepositoryProtocol.swift; sourceTree = "<group>"; };
+		2FAF33C328B12622000C8488 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		2FAF33C528B1272E000C8488 /* ImageRepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepositoryAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				2FAF33AD28B11939000C8488 /* PlacesRepositoryProtocol.swift */,
+				2FAF33C028B125C5000C8488 /* ImageRepositoryProtocol.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				2FAF33B528B11C8E000C8488 /* PlaceRepository */,
+				2FAF33C228B12600000C8488 /* ImageRepository */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -224,6 +232,15 @@
 				2FAF33BC28B11E81000C8488 /* Swinject+typealias+extension.swift */,
 			);
 			path = "Swinject+extension";
+			sourceTree = "<group>";
+		};
+		2FAF33C228B12600000C8488 /* ImageRepository */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33C328B12622000C8488 /* ImageRepository.swift */,
+				2FAF33C528B1272E000C8488 /* ImageRepositoryAssembly.swift */,
+			);
+			path = ImageRepository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,7 +406,10 @@
 				2FAF33AE28B11939000C8488 /* PlacesRepositoryProtocol.swift in Sources */,
 				2FAF33BD28B11E81000C8488 /* Swinject+typealias+extension.swift in Sources */,
 				2FAF33B428B11C82000C8488 /* PlaceRepository.swift in Sources */,
+				2FAF33C628B1272E000C8488 /* ImageRepositoryAssembly.swift in Sources */,
+				2FAF33C128B125C5000C8488 /* ImageRepositoryProtocol.swift in Sources */,
 				2FAF33BF28B11EB2000C8488 /* PlaceRepositoryAssembly.swift in Sources */,
+				2FAF33C428B12622000C8488 /* ImageRepository.swift in Sources */,
 				2FAF33B028B11958000C8488 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
