@@ -14,6 +14,12 @@
 		2FAF338E28B10640000C8488 /* MVVM_CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF338D28B10640000C8488 /* MVVM_CombineTests.swift */; };
 		2FAF339828B10640000C8488 /* MVVM_CombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF339728B10640000C8488 /* MVVM_CombineUITests.swift */; };
 		2FAF339A28B10640000C8488 /* MVVM_CombineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF339928B10640000C8488 /* MVVM_CombineUITestsLaunchTests.swift */; };
+		2FAF33AE28B11939000C8488 /* PlacesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33AD28B11939000C8488 /* PlacesRepositoryProtocol.swift */; };
+		2FAF33B028B11958000C8488 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33AF28B11958000C8488 /* Place.swift */; };
+		2FAF33B428B11C82000C8488 /* PlaceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33B328B11C82000C8488 /* PlaceRepository.swift */; };
+		2FAF33B828B11E03000C8488 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAF33B728B11E03000C8488 /* Swinject */; };
+		2FAF33BD28B11E81000C8488 /* Swinject+typealias+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33BC28B11E81000C8488 /* Swinject+typealias+extension.swift */; };
+		2FAF33BF28B11EB2000C8488 /* PlaceRepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33BE28B11EB2000C8488 /* PlaceRepositoryAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,11 @@
 		2FAF339328B10640000C8488 /* MVVM_CombineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVM_CombineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAF339728B10640000C8488 /* MVVM_CombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_CombineUITests.swift; sourceTree = "<group>"; };
 		2FAF339928B10640000C8488 /* MVVM_CombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_CombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2FAF33AD28B11939000C8488 /* PlacesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRepositoryProtocol.swift; sourceTree = "<group>"; };
+		2FAF33AF28B11958000C8488 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		2FAF33B328B11C82000C8488 /* PlaceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRepository.swift; sourceTree = "<group>"; };
+		2FAF33BC28B11E81000C8488 /* Swinject+typealias+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swinject+typealias+extension.swift"; sourceTree = "<group>"; };
+		2FAF33BE28B11EB2000C8488 /* PlaceRepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRepositoryAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FAF33B828B11E03000C8488 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				2FAF33A628B1085B000C8488 /* Root */,
+				2FAF33B928B11E3E000C8488 /* Tools */,
+				2FAF33AA28B118F6000C8488 /* Domain */,
+				2FAF33B128B119DC000C8488 /* Data */,
 				2FAF33A728B11117000C8488 /* SupportedFiles */,
 			);
 			path = MVVM_Combine;
@@ -137,6 +152,80 @@
 			path = SupportedFiles;
 			sourceTree = "<group>";
 		};
+		2FAF33AA28B118F6000C8488 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33AB28B11903000C8488 /* Entity */,
+				2FAF33AC28B11918000C8488 /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2FAF33AB28B11903000C8488 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33AF28B11958000C8488 /* Place.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2FAF33AC28B11918000C8488 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33AD28B11939000C8488 /* PlacesRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2FAF33B128B119DC000C8488 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33B228B11A1B000C8488 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2FAF33B228B11A1B000C8488 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33B528B11C8E000C8488 /* PlaceRepository */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2FAF33B528B11C8E000C8488 /* PlaceRepository */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33B328B11C82000C8488 /* PlaceRepository.swift */,
+				2FAF33BE28B11EB2000C8488 /* PlaceRepositoryAssembly.swift */,
+			);
+			path = PlaceRepository;
+			sourceTree = "<group>";
+		};
+		2FAF33B928B11E3E000C8488 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33BA28B11E4E000C8488 /* Extension */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		2FAF33BA28B11E4E000C8488 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33BB28B11E5F000C8488 /* Swinject+extension */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2FAF33BB28B11E5F000C8488 /* Swinject+extension */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33BC28B11E81000C8488 /* Swinject+typealias+extension.swift */,
+			);
+			path = "Swinject+extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,6 +243,9 @@
 			dependencies = (
 			);
 			name = MVVM_Combine;
+			packageProductDependencies = (
+				2FAF33B728B11E03000C8488 /* Swinject */,
+			);
 			productName = MVVM_Combine;
 			productReference = 2FAF337328B1063F000C8488 /* MVVM_Combine.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +318,9 @@
 				Base,
 			);
 			mainGroup = 2FAF336A28B1063F000C8488;
+			packageReferences = (
+				2FAF33B628B11E03000C8488 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 2FAF337428B1063F000C8488 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -291,6 +386,11 @@
 			files = (
 				2FAF337728B1063F000C8488 /* AppDelegate.swift in Sources */,
 				2FAF337928B1063F000C8488 /* SceneDelegate.swift in Sources */,
+				2FAF33AE28B11939000C8488 /* PlacesRepositoryProtocol.swift in Sources */,
+				2FAF33BD28B11E81000C8488 /* Swinject+typealias+extension.swift in Sources */,
+				2FAF33B428B11C82000C8488 /* PlaceRepository.swift in Sources */,
+				2FAF33BF28B11EB2000C8488 /* PlaceRepositoryAssembly.swift in Sources */,
+				2FAF33B028B11958000C8488 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +722,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FAF33B628B11E03000C8488 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FAF33B728B11E03000C8488 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FAF33B628B11E03000C8488 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2FAF336B28B1063F000C8488 /* Project object */;
 }
