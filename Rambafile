@@ -1,0 +1,24 @@
+### Headers settings
+company: MVVMCombine
+
+### Xcode project settings
+project_name: MVVM_Combine
+xcodeproj_path: MVVM_Combine.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: MVVM_Combine
+
+# The file path for new modules
+project_file_path: MVVM_Combine/Presentation/Scene
+
+# The Xcode group path to new modules
+project_group_path: MVVM_Combine/Presentation/Scene
+
+### Templates
+templates:
+- {name: scene}
+
+#- {name: local_template_name, local: 'absolute/file/path'}
+#- {name: remote_template_name, git: 'https://github.com/igrekde/remote_template'}
+#- {name: catalog_template_name}

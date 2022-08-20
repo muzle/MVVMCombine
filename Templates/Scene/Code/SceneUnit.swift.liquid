@@ -1,0 +1,11 @@
+import Foundation
+import Combine
+
+enum {{ module_info.name }}SceneUnit: UnitProtocol {
+    struct Input {
+    }
+    
+    struct Output {
+        let empty: AnyPublisher<Void, Never>
+    }
+}

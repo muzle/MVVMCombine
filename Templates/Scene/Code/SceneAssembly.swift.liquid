@@ -1,0 +1,28 @@
+import Foundation
+
+final class {{ module_info.name }}SceneAssembly: Assembly {
+    func assemble(container: Container) {
+        
+        // MARK: - Scene
+        
+        container.register({{ module_info.name }}Scene.self) { (resolver, config: {{ module_info.name }}SceneModel.Configuration) in
+            
+            let viewModel = resolver.resolve({{ module_info.name }}SceneUnit.ViewModel.self, argument: config)!
+            return {{ module_info.name }}Scene().apply {
+                $0.viewModel = viewModel
+            }
+        }
+        
+        // MARK: - ViewModel
+        
+        container.register({{ module_info.name }}SceneUnit.ViewModel.self) { (resolver, config: {{ module_info.name }}SceneModel.Configuration) in
+            
+            let viewModel = {{ module_info.name }}SceneModel(
+                dependencies: .create(with: resolver),
+                configuration: config
+            )
+            
+            return viewModel.asAnyViewModel()
+        }
+    }
+}

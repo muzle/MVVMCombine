@@ -1,0 +1,48 @@
+import Foundation
+import Combine
+
+final class {{ module_info.name }}SceneModel: ViewModelProtocol {
+    
+    // MARK: - Types
+    
+    typealias Unit = {{ module_info.name }}SceneUnit
+    
+    struct Dependencies: AutoInjection {
+        
+    }
+    
+    struct Configuration {
+        
+    }
+    
+    // MARK: - Private properties
+    
+    private let dependencies: Dependencies
+    private let configuration: Configuration
+    
+    // MARK: - Initialization
+    
+    init(
+        dependencies: Dependencies,
+        configuration: Configuration
+    ) {
+        self.dependencies = dependencies
+        self.configuration = configuration
+    }
+}
+
+// MARK: - ViewModelProtocol
+
+extension {{ module_info.name }}SceneModel {
+    func transform(input: Unit.Input) -> Unit.Output {
+        return Unit.Output(
+            empty: Empty().eraseToAnyPublisher()
+        )
+    }
+}
+
+// MARK: - Private methods
+
+private extension {{ module_info.name }}SceneModel {
+    
+}

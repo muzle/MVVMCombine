@@ -1,0 +1,74 @@
+import UIKit
+import PinLayout
+import Combine
+import CombineCocoa
+
+final class {{ module_info.name }}Scene: UIViewController, ViewModelBindableProtocol {
+
+    // MARK: - TypeAlias
+    
+    typealias Unit = {{ module_info.name }}SceneUnit
+    typealias ViewModel = Unit.ViewModel
+    
+    // MARK: - Constants
+    
+    private enum Constants {
+        
+    }
+    
+    // MARK: - Public properties
+    
+    var viewModel: ViewModel?
+    
+    // MARK: - Private properties
+    
+    private var subscriptions = Set<AnyCancellable>()
+}
+
+// MARK: - Life cycle
+
+extension {{ module_info.name }}Scene {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        guard let viewModel = viewModel else {
+            preconditionFailure("\(#function) must be assigned before viewDidLoad")
+        }
+        commonInit()
+        bind(viewModel: viewModel)
+    }
+}
+
+// MARK: - ViewModelBindableProtocol
+
+extension {{ module_info.name }}Scene {
+    func bind(viewModel: ViewModel) {
+        let input = ViewModel.Input()
+        let output = viewModel.transform(input: input)
+        
+        subscriptions = [
+            output.empty.sink(receiveValue: {})
+        ]
+    }
+}
+
+// MARK: - Layout
+
+private extension {{ module_info.name }}Scene {
+    func commonInit() {
+        setConstraints()
+        localize()
+        setUI()
+    }
+    
+    func setConstraints() {
+        
+    }
+    
+    func setUI() {
+        view.backgroundColor = .systemBackground
+    }
+    
+    func localize() {
+        
+    }
+}
