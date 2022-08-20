@@ -23,6 +23,12 @@
 		2FAF33C128B125C5000C8488 /* ImageRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33C028B125C5000C8488 /* ImageRepositoryProtocol.swift */; };
 		2FAF33C428B12622000C8488 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33C328B12622000C8488 /* ImageRepository.swift */; };
 		2FAF33C628B1272E000C8488 /* ImageRepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33C528B1272E000C8488 /* ImageRepositoryAssembly.swift */; };
+		2FAF33CA28B12B44000C8488 /* EventTrackerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33C928B12B44000C8488 /* EventTrackerProtocol.swift */; };
+		2FAF33CC28B12B50000C8488 /* AnyEventTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33CB28B12B50000C8488 /* AnyEventTracker.swift */; };
+		2FAF33D028B12C00000C8488 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33CF28B12C00000C8488 /* ViewModelProtocol.swift */; };
+		2FAF33D228B12C15000C8488 /* UnitProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33D128B12C15000C8488 /* UnitProtocol.swift */; };
+		2FAF33D428B12C2E000C8488 /* AnyUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33D328B12C2E000C8488 /* AnyUnit.swift */; };
+		2FAF33D628B12C71000C8488 /* AnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF33D528B12C71000C8488 /* AnyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,12 @@
 		2FAF33C028B125C5000C8488 /* ImageRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepositoryProtocol.swift; sourceTree = "<group>"; };
 		2FAF33C328B12622000C8488 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		2FAF33C528B1272E000C8488 /* ImageRepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepositoryAssembly.swift; sourceTree = "<group>"; };
+		2FAF33C928B12B44000C8488 /* EventTrackerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTrackerProtocol.swift; sourceTree = "<group>"; };
+		2FAF33CB28B12B50000C8488 /* AnyEventTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEventTracker.swift; sourceTree = "<group>"; };
+		2FAF33CF28B12C00000C8488 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		2FAF33D128B12C15000C8488 /* UnitProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitProtocol.swift; sourceTree = "<group>"; };
+		2FAF33D328B12C2E000C8488 /* AnyUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyUnit.swift; sourceTree = "<group>"; };
+		2FAF33D528B12C71000C8488 /* AnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +225,7 @@
 		2FAF33B928B11E3E000C8488 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2FAF33C728B12AD2000C8488 /* MVVM+support */,
 				2FAF33BA28B11E4E000C8488 /* Extension */,
 			);
 			path = Tools;
@@ -241,6 +254,43 @@
 				2FAF33C528B1272E000C8488 /* ImageRepositoryAssembly.swift */,
 			);
 			path = ImageRepository;
+			sourceTree = "<group>";
+		};
+		2FAF33C728B12AD2000C8488 /* MVVM+support */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33CD28B12BE5000C8488 /* Unit */,
+				2FAF33CE28B12BEC000C8488 /* ViewModel */,
+				2FAF33C828B12B35000C8488 /* EventTracker */,
+			);
+			path = "MVVM+support";
+			sourceTree = "<group>";
+		};
+		2FAF33C828B12B35000C8488 /* EventTracker */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33C928B12B44000C8488 /* EventTrackerProtocol.swift */,
+				2FAF33CB28B12B50000C8488 /* AnyEventTracker.swift */,
+			);
+			path = EventTracker;
+			sourceTree = "<group>";
+		};
+		2FAF33CD28B12BE5000C8488 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33D128B12C15000C8488 /* UnitProtocol.swift */,
+				2FAF33D328B12C2E000C8488 /* AnyUnit.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		2FAF33CE28B12BEC000C8488 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF33CF28B12C00000C8488 /* ViewModelProtocol.swift */,
+				2FAF33D528B12C71000C8488 /* AnyViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,13 +452,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FAF337728B1063F000C8488 /* AppDelegate.swift in Sources */,
+				2FAF33D628B12C71000C8488 /* AnyViewModel.swift in Sources */,
+				2FAF33CC28B12B50000C8488 /* AnyEventTracker.swift in Sources */,
+				2FAF33CA28B12B44000C8488 /* EventTrackerProtocol.swift in Sources */,
 				2FAF337928B1063F000C8488 /* SceneDelegate.swift in Sources */,
+				2FAF33D428B12C2E000C8488 /* AnyUnit.swift in Sources */,
+				2FAF33D028B12C00000C8488 /* ViewModelProtocol.swift in Sources */,
 				2FAF33AE28B11939000C8488 /* PlacesRepositoryProtocol.swift in Sources */,
 				2FAF33BD28B11E81000C8488 /* Swinject+typealias+extension.swift in Sources */,
 				2FAF33B428B11C82000C8488 /* PlaceRepository.swift in Sources */,
 				2FAF33C628B1272E000C8488 /* ImageRepositoryAssembly.swift in Sources */,
 				2FAF33C128B125C5000C8488 /* ImageRepositoryProtocol.swift in Sources */,
 				2FAF33BF28B11EB2000C8488 /* PlaceRepositoryAssembly.swift in Sources */,
+				2FAF33D228B12C15000C8488 /* UnitProtocol.swift in Sources */,
 				2FAF33C428B12622000C8488 /* ImageRepository.swift in Sources */,
 				2FAF33B028B11958000C8488 /* Place.swift in Sources */,
 			);
